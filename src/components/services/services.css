@@ -1,0 +1,91 @@
+.services {
+    padding: 60px 20px;
+    overflow-x: scroll;
+    background-color: white;
+}
+
+.services-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.services-header h2 {
+    font-size: 2.5rem;
+    color: black;
+}
+
+.services-header p {
+    font-size: 1.2rem;
+    color: black;
+}
+
+.services-grid {
+    display: flex;
+    width: 2000px;
+    overflow: hidden;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.service-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.service-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.service-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.service-image img {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    object-fit: cover;
+    border-bottom: 2px solid #f1f1f1;
+}
+
+.service-details {
+    padding: 20px;
+}
+
+.service-details h3 {
+    font-size: 1.6rem;
+    color: black;
+    margin-bottom: 15px;
+}
+
+.service-details p {
+    font-size: 1rem;
+    color: black;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .services-header h2 {
+        font-size: 2rem;
+    }
+
+    .services-header p {
+        font-size: 1rem;
+    }
+}

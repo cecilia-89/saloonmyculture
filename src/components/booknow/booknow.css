@@ -1,0 +1,58 @@
+.book-visit {
+    padding: 40px 20px;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    display: flex;
+    background: white;
+}
+
+.book-visit > div p {
+    max-width: 400px;
+}
+
+
+.book-visit-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.book-visit-form {
+    display: flex;
+    max-width: 500px;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.form-group input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #2c2d2d;
+}
+
+.book-visit-btn {
+    background: #2c2d2d;
+    color: white;
+    font-size: 18px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}

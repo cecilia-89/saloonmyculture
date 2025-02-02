@@ -1,0 +1,67 @@
+/* General section styles */
+.why-us {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.why-us h2 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 40px;
+}
+
+/* Container for the items */
+.why-us-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Individual Why Us item */
+.why-us-item {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.why-us-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.why-us-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.why-us-item h3 {
+    font-size: 1.5rem;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.why-us-item p {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .why-us-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .why-us-item {
+        width: 90%;
+        margin-bottom: 30px;
+    }
+}
