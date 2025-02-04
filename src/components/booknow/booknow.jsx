@@ -9,13 +9,14 @@ import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
 import success from '/images/success(1).svg'
 import error from '/images/error.svg'
 
+
 const BookNow = () => {
   const formRef = useRef(null);
   const [value, setValue] = useState(null);
   const [loading, setLoading] = useState(false)
   const [showSuccessPopup, setShowSuccessPopup] = useState(false)
   const [showFailurePopup, setShowFailurePopup] = useState(false)
-  const url = 'http://localhost:3000/api/book-appointment'
+  const url = 'https://salonmycultureapi.onrender.com/api/book-appointment'
  
 
   const handleSubmit = async (e) => {
