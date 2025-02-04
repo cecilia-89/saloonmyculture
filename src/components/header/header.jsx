@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Link } from 'react-scroll';
+import logo from '/images/sanloonmyculture-removebg-preview.png'
 import "./header.css";
 
 const Header = () => {
@@ -6,12 +8,20 @@ const Header = () => {
 
   return (
     <header className="header">
-      <div className="logo">MyWebsite</div>
+      <div className="logo">
+        <img src={logo} alt="salon my culture logo"/>
+      </div>
+
       <nav className={`nav-links ${isOpen ? "open" : ""}`}>
         {["About Us", "Why Us", "Services", "Testimonials", "Book Now"].map((item) => (
-          <a key={item} href={`#${item.toLowerCase().replace(/\s+/g, "")}`} onClick={() => setIsOpen(false)}>
-            {item}
-          </a>
+          <div key={item} style={{cursor: 'pointer'}}>
+            <Link 
+            onClick={() => setIsOpen(false)}
+            smooth={true} 
+            duration={500} 
+            to={item.toLowerCase().replace(/\s+/g, "")} 
+            >{item}</Link>
+          </div>
         ))}
       </nav>
       <button className="menu-toggle" onClick={() => setIsOpen(!isOpen)}>☰</button>

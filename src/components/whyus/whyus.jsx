@@ -3,7 +3,7 @@ import './whyus.css';
 
 const WhyUs = () => {
   return (
-    <section className="why-us">
+    <section className="why-us" id="whyus">
       <h2>Why Choose Us?</h2>
       <div className="why-us-container">
         <div className="why-us-item">

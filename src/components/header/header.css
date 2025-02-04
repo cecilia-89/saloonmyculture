@@ -9,7 +9,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 10px 15px;
     position: sticky;
     top: 0;
     background: white;
@@ -17,9 +17,9 @@
     z-index: 5;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
+.logo img {
+    max-width: 60px;
+    width: 100%;
 }
 
 .nav-links {

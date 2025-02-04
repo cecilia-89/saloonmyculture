@@ -37,7 +37,7 @@ const testimonialsData = [
 
 const Testimonials = () => {
   return (
-    <section className="testimonials">
+    <section className="testimonials" id="testimonials">
       <div className="testimonials-header">
         <h2>What Our Clients Are Saying</h2>
         <p>Read the experiences of some of our happy clients.</p>
