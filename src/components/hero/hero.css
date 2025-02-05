@@ -2,7 +2,7 @@
     display: flex;
     justify-content: start;
     align-items: center;
-    color: white;
+    color: rgb(224, 224, 224);
     position: relative;
     overflow: hidden;
 }
@@ -38,14 +38,19 @@
     color: white !important;
 }
 
-
 .hero-image {
-    background-size: cover;
     position: relative;
-    background-position: center;
-    min-height: 550px;
+}
+
+
+.hero-image img {
+    object-fit: cover;
+    object-position: center;
+    height: 100vh;
     width: 100vw;
 }
+
+
 
 .hero-image::before {
     content: '';
@@ -60,6 +65,11 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+
+    .hero {
+        justify-content: center;
+    }
+    
     .hero h1 {
         font-size: 2rem;
     }

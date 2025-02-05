@@ -45,13 +45,11 @@ const Testimonials = () => {
 
       <Swiper
         effect="fade"
-        fadeEffect={{ crossFade: true }}
         slidesPerView={1}
         loop={true}
         pagination={{ clickable: true }}
         modules={[Autoplay, Pagination]}
         autoplay={{ delay: 3000 }}
-        className="testimonial-slider"
       >
         {testimonialsData.map((testimonial, index) => (
           <SwiperSlide key={index} className="testimonial-slide">

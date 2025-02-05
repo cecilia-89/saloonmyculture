@@ -1,0 +1,69 @@
+.faqs {
+    background: rgb(255, 255, 255);
+    padding: 20px 20px 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.faqs > div:first-child {
+    max-width: 400px;
+}
+
+
+
+.faqs h1 {
+    font-weight: 600;
+}
+
+.faqs > div:nth-child(2) {
+    margin-top: 30px;
+}
+
+.accordion {
+    max-width: 500px;
+    position: relative;
+    cursor: pointer;
+}
+
+.accordion input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.accordion-title {
+    padding: 15px 0;
+    font-weight: 500;
+    border-top: 1px solid rgba(0, 0, 0, 0.267);
+}
+
+
+.accordion-body p {
+    padding: 10px 0;
+}
+
+
+.accordion-body {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: 250ms grid-template-rows ease-in-out
+}
+
+input:checked ~ .accordion-body {
+    grid-template-rows: 1fr;
+}
+
+.accordion-body > div {
+    overflow: hidden;
+}
+
+
+@media (max-width: 768px) {
+
+    .faqs{
+        flex-direction: column;
+    }
+   
+}

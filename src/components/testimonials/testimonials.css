@@ -28,9 +28,8 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 30px;
+    padding: 10px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
 }

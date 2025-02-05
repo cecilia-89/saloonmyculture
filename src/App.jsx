@@ -6,6 +6,7 @@ import Services from './components/services/services'
 import Testimonials from './components/testimonials/testimonials'
 import BookNow from './components/booknow/booknow'
 import Footer from './components/footer/footer'
+import FAQs from './components/FAQs/faq'
 import './App.css'
 
 
@@ -14,9 +15,8 @@ function App() {
   
 
   return (
-    <>
+    <div>
      <section className="fixed-image">
-      <img src="/images/1.jpg" alt="" />
      </section>
      <Header />
      <Hero />
@@ -24,9 +24,10 @@ function App() {
      <WhyUs />
      <Services />
      <Testimonials />
+     <FAQs/>
      <BookNow />
      <Footer />
-    </>
+    </div>
   )
 }
 

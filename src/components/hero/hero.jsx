@@ -11,7 +11,7 @@ const Hero = () => {
     <section className="hero">
       <div className="hero-content">
         <h1>Wear your beauty with pride</h1>
-        <p>At SalonMyCulture, we believe in embracing your unique style and expressing your individuality through the artistry of your hair and nails. Whether it's a bold new hairstyle or perfectly polished nails, we are here to make sure you feel your best. Beauty lies in every detail, and we strive to highlight your confidence and strength.</p>
+        <p>At SalonMyCulture, we believe in embracing your unique style and expressing your individuality through the artistry of your hair and nails.</p>
       </div>
       
       <Swiper
@@ -25,10 +25,15 @@ const Hero = () => {
         autoplay={{ delay: 3000, disableOnInteraction: true}}
       >
         <SwiperSlide>
-          <div className="hero-image" style={{ backgroundImage: "url(/images/salonmyculture.jpg)"}}></div>
+          <div className="hero-image">
+            <img src="/images/WhatsApp Image 2025-02-04 at 19.37.15_e3aa8ca3.jpg"/>
+          </div>
         </SwiperSlide>
+
         <SwiperSlide>
-          <div className="hero-image" style={{ backgroundImage: "url(/images/IMG_0268.jpg)"}}></div>
+          <div className="hero-image">
+            <img src="/images/8ddfc54557334e96a2eac37ab491e1c5.avif"/>
+          </div>
         </SwiperSlide>
       </Swiper>
     </section>

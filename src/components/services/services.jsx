@@ -1,110 +1,79 @@
 import React from "react";
+import 'swiper/css';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css/free-mode';
+import 'swiper/css/pagination';
 import "./services.css";
+
+
+import {Pagination} from 'swiper/modules';
 
 const Services = () => {
   return (
     <section className="services" id="services">
       <div className="services-header">
-        <h2>Our Premium Services</h2>
-        <p>Explore our range of professional hair services, designed just for you!</p>
+        <h2>Gallery</h2>
       </div>
 
-      <div className="services-grid">
-        <div className="service-card">
-          <div className="service-image">
-            <img loading="lazy"
-              src="/images/IMG_0268.jpg"
-              alt="Wig Making"
-            />
-          </div>
-          <div className="service-details">
-            <h3>Nail fixing</h3>
-            <p>
-              We specialize in fixing beautiful, stylish and durable nail designs, from classic to trendy, ensuring your nails look flawless for any event."
-            </p>
-          </div>
-        </div>
+      <div className="services-images"> 
+        <Swiper
+          slidesPerView={'auto'}
+          spaceBetween={10}
+          loop={true}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Pagination]}
+          className="services-mySwiper"
+        >
+          <SwiperSlide>
+            <img src="/images/WhatsApp Image 2025-02-04 at 19.37.28_53d94060_1.jpg"/>
+          </SwiperSlide>
 
-        <div className="service-card">
-          <div className="service-image">
-            <img loading="lazy"
-              src="/images/IMG_0393.JPG"
-              alt="Installing Human Hair"
-            />
-          </div>
-          <div className="service-details">
-            <h3>Human Installment</h3>
-            <p>
-              Our expert stylists provide flawless human hair installation,
-              ensuring that your new look is natural, long-lasting, and stunning.
-            </p>
-          </div>
-        </div>
+          <SwiperSlide>
+            <img src="/images/WhatsApp Image 2025-02-04 at 19.37.29_a7b5764d_1(1).jpg" alt=""/>
+          </SwiperSlide>
 
-        <div className="service-card">
-          <div className="service-image">
-            <img loading="lazy"
-              src="/images/IMG_0207.jpg"
-              alt="Dreads"
-            />
-          </div>
-          <div className="service-details">
-            <h3>Dreads</h3>
-            <p>
-              We offer professional dreadlocks maintenance, including a deep
-              clean to keep your locks healthy and fresh. Our treatment restores
-              shine and bounce to your dreads.
-            </p>
-          </div>
-        </div>
+          <SwiperSlide>
+            <video src="/images/IMG_0234.MP4" autoPlay muted loop></video>
+          </SwiperSlide>
 
-        <div className="service-card">
-          <div className="service-image">
-            <img loading="lazy"
-              src="/images/IMG_0283.JPG"
-              alt="Braiding"
-            />
-          </div>
-          <div className="service-details">
-            <h3>Braiding</h3>
-            <p>
-              Choose from a variety of braided styles—whether it's box braids,
-              cornrows, or Ghana weaving, our stylists will give you the perfect
-              look.
-            </p>
-          </div>
-        </div>
+          <SwiperSlide>
+            <img src="/images/IMG_0090.jpg" alt=""/>
+          </SwiperSlide>
 
-        <div className="service-card">
-          <div className="service-image">
-            <img loading="lazy"
-              src="/images/IMG_0178.jpg"
-              alt="Plaiting"
-            />
-          </div>
-          <div className="service-details">
-            <h3>Plaiting</h3>
-            <p>
-              Our plaiting services offer beautiful and elegant styles, from
-              traditional to trendy plaits, for any occasion.
-            </p>
-          </div>
-        </div>
+          <SwiperSlide>
+            <img src="/images/IMG_0393.JPG" alt=""/>
+          </SwiperSlide>
 
-         <div className="service-card">
-          <div className="service-image">
-            <img loading="lazy"
-              src="/images/IMG_0090.jpg"
-              alt="faux locs"
-            />
-          </div>
-          <div className="service-details">
-            <h3>Faux locs</h3>
-            <p>
-             Our faux locs services provide stunning, long-lasting styles that blend traditional and modern techniques, perfect for any occasion."
-            </p>
-          </div>
-        </div>
+           <SwiperSlide>
+            <video src="/images/WhatsApp Video 2025-02-04 at 19.38.25_68c51a55.mp4" autoPlay muted loop></video>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <img src="/images/IMG_0207.jpg" alt=""/>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <img src="/images/IMG_0268.jpg" alt=""/>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <img src="/images/IMG_0178.jpg" alt=""/>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <video src="/images/WhatsApp Video 2025-02-04 at 19.40.06_5a8eddac.mp4" autoPlay muted loop></video>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <img src="/images/IMG_0020.jpg" alt=""/>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <img src="/images/IMG_0283.JPG" alt=""/>
+          </SwiperSlide>
+      </Swiper>
       </div>
     </section>
   );
