@@ -1,12 +1,12 @@
 import React from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import 'swiper/css/effect-flip';
+import 'swiper/css/effect-fade';
 import 'swiper/css/pagination';
 import "./aboutus.css";
 
 
-import { EffectFlip, Autoplay, Pagination } from "swiper/modules";
+import { EffectFade, Autoplay, Pagination } from "swiper/modules";
 
 const AboutUs = () => {
   return (
@@ -26,12 +26,12 @@ const AboutUs = () => {
 
         <div className="about-images">
           <Swiper
-            effect={'flip'}
+            effect={'fade'}
             autoplay={{ delay: 3000 }}
             pagination={{ clickable: true }}
             loop={true}
             className="mySwiper"
-            modules={[EffectFlip, Autoplay, Pagination]}
+            modules={[EffectFade, Autoplay, Pagination]}
           >
             <SwiperSlide>
               <img src="/images/WhatsApp Image 2025-02-04 at 19.37.13_78e5ce4a_1.jpg"/>
