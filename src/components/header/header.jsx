@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Link as ScrollLink } from 'react-scroll';
 import { Link } from "react-router-dom";
@@ -8,7 +8,11 @@ import "./header.css";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation()
-  const isHome = location?.pathname === '/'
+  const isHome = location.pathname.split("/").filter(Boolean).pop();
+
+  useEffect(() => {
+    const lastSegment = location.pathname.split("/").filter(Boolean).pop();
+  }, [location.pathname])
 
 
   return (
@@ -17,7 +21,7 @@ const Header = () => {
         <Link to="/"><img src={logo} alt="salon my culture logo"/></Link>
       </div>
 
-      {isHome? (
+      {!isHome? (
         <nav className={`nav-links ${isOpen ? "open" : ""}`}>
         {["About Us", "Why Us", "Services", "Gallery", "Testimonials", "Book Now"].map((item) => (
           <div key={item} style={{cursor: 'pointer'}}>
@@ -33,10 +37,9 @@ const Header = () => {
       }
 
     
-      {isHome === '/'? (
+      {!isHome? (
         <button className="menu-toggle" onClick={() => setIsOpen(!isOpen)}>☰</button>) : null
       }
-      
     </header>
   );
 };
