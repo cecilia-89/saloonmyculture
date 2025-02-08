@@ -1,0 +1,23 @@
+.service-item ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px
+}
+
+.service-item {
+    background: white;
+}
+
+.service-item > div {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.service-item li {
+    justify-content: space-between;
+    gap: 20px
+}
+
+.service-footer {
+    margin-top: 40px;
+}

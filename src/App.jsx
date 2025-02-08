@@ -1,33 +1,23 @@
+import Landing from '../pages/landing/landing'
 import Header from './components/header/header'
-import Hero from './components/hero/hero'
-import AboutUs from './components/aboutus/aboutus'
-import WhyUs from './components/whyus/whyus'
-import Services from './components/services/services'
-import Testimonials from './components/testimonials/testimonials'
-import BookNow from './components/booknow/booknow'
 import Footer from './components/footer/footer'
-import FAQs from './components/FAQs/faq'
+import Servicesitem from './components/ServicesItem/servicesitem'
+import { Route, Routes, BrowserRouter } from 'react-router-dom'
 import './App.css'
-
 
 
 function App() {
   
 
   return (
-    <div>
-     <section className="fixed-image">
-     </section>
-     <Header />
-     <Hero />
-     <AboutUs />
-     <WhyUs />
-     <Services />
-     <Testimonials />
-     <FAQs/>
-     <BookNow />
-     <Footer />
-    </div>
+    <BrowserRouter>
+       <Header/>
+        <Routes>
+          <Route path='/' element={<Landing/>}/>
+          <Route path='/services/:id' element={<Servicesitem/>} />
+        </Routes>
+      <Footer/>
+    </BrowserRouter>
   )
 }
 

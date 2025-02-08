@@ -17,6 +17,7 @@ const BookNow = () => {
   const [showSuccessPopup, setShowSuccessPopup] = useState(false)
   const [showFailurePopup, setShowFailurePopup] = useState(false)
   const url = 'https://salonmycultureapi.onrender.com/api/book-appointment'
+  const urlDev='http://localhost:3000/api/book-appointment'
  
 
   const handleSubmit = async (e) => {
@@ -40,7 +41,7 @@ const BookNow = () => {
     setTimeout(() => setShowSuccessPopup(false), 3000);
 
     } catch (error) {
-      setShowErrorPopup(true)
+      setShowFailurePopup(true)
       setTimeout(() => setShowFailurePopup(false), 3000);
 
     } finally {
@@ -75,12 +76,15 @@ const BookNow = () => {
         <div className="form-group">
           <input type="email" name="email" placeholder="Email Address" required />
         </div>
+         <div className="form-group">
+          <input type="number" name="number" id="" placeholder="phone number" />
+        </div>
         <LocalizationProvider dateAdapter={AdapterDayjs}>
           <DemoContainer components={['DateTimePicker']}>
             <DateTimePicker label="Pick appointment date" value={value} onChange={(newValue) => setValue(newValue)}/>
           </DemoContainer>
         </LocalizationProvider>
-        <button type="submit" disabled={!value} className="book-visit-btn">
+        <button type="submit" disabled={!value || loading} className="book-visit-btn">
           {!loading? 'Book Now' : <Lottie options={defaultOptions} height={20} width={20}/>}
         </button>
       </form>

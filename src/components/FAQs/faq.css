@@ -1,6 +1,7 @@
 .faqs {
-    background: rgb(255, 255, 255);
-    padding: 20px 20px 0;
+    background: #222;
+    padding: 20px;
+    color: white;
     display: flex;
     gap: 20px;
     justify-content: center;
@@ -9,8 +10,6 @@
 .faqs > div:first-child {
     max-width: 400px;
 }
-
-
 
 .faqs h1 {
     font-weight: 600;
@@ -36,7 +35,7 @@
 .accordion-title {
     padding: 15px 0;
     font-weight: 500;
-    border-top: 1px solid rgba(0, 0, 0, 0.267);
+    border-top: 1px solid rgba(253, 251, 251, 0.267);
 }
 
 

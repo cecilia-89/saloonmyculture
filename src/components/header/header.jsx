@@ -1,30 +1,42 @@
 import { useState } from "react";
-import { Link } from 'react-scroll';
+import { useLocation } from "react-router-dom";
+import { Link as ScrollLink } from 'react-scroll';
+import { Link } from "react-router-dom";
 import logo from '/images/sanloonmyculture-removebg-preview.png'
 import "./header.css";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation()
+  const isHome = location?.pathname === '/'
+
 
   return (
     <header className="header">
       <div className="logo">
-        <img src={logo} alt="salon my culture logo"/>
+        <Link to="/"><img src={logo} alt="salon my culture logo"/></Link>
       </div>
 
-      <nav className={`nav-links ${isOpen ? "open" : ""}`}>
-        {["About Us", "Why Us", "Services", "Testimonials", "Book Now"].map((item) => (
+      {isHome? (
+        <nav className={`nav-links ${isOpen ? "open" : ""}`}>
+        {["About Us", "Why Us", "Services", "Gallery", "Testimonials", "Book Now"].map((item) => (
           <div key={item} style={{cursor: 'pointer'}}>
-            <Link 
+            <ScrollLink 
             onClick={() => setIsOpen(false)}
             smooth={true} 
             duration={500} 
             to={item.toLowerCase().replace(/\s+/g, "")} 
-            >{item}</Link>
+            >{item}</ScrollLink>
           </div>
         ))}
-      </nav>
-      <button className="menu-toggle" onClick={() => setIsOpen(!isOpen)}>☰</button>
+      </nav> ): null
+      }
+
+    
+      {isHome === '/'? (
+        <button className="menu-toggle" onClick={() => setIsOpen(!isOpen)}>☰</button>) : null
+      }
+      
     </header>
   );
 };

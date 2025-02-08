@@ -59,8 +59,8 @@ const FAQs = () => {
             </div>
 
             <div>
-                {faqs.map(faq => (
-                <div className="accordion">
+                {faqs.map((faq) => (
+                <div key={faq.title} className="accordion">
                     <input type="checkbox" name="" id="" />
                     <div className="accordion-title">{faq.title}</div>
                      <div className="accordion-body">

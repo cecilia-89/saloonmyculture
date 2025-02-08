@@ -1,39 +1,44 @@
 .services {
-    padding: 60px 20px;
-    width: 100%;
-    background-color: white;
-    overflow: hidden;
+    background: #222;
+    padding: 30px 20px;
+    display: flex;
 }
 
-.services-header {
+.service-object {
     text-align: center;
+    background: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    width: 350px;
+    min-height: 450px;
+    padding: 20px
+}
+
+.services button {
+    background: transparent;
+    text-decoration: underline;
+    margin-top: 20px;
+    border: 0;
+    color: black;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.service-object h1 {
+    font-weight: 500;
     margin-bottom: 20px;
 }
 
-.services-header h2 {
-    font-size: 2.5rem;
-    color: black;
+.service-object-wrapper {
+    margin: 20px;
+    display: flex;
 }
-
-.services-mySwiper .swiper-slide {
-    width: fit-content!important;
-}
-
-
-.services-images img,
-.services-images video {
-    width: 350px;
-    height: 500px;
-    object-fit: cover;
-}
-
 
 @media (max-width: 768px) {
-    .services-header h2 {
-        font-size: 2rem;
-    }
-
-    .services-header p {
-        font-size: 1rem;
-    }
+    .service-object {
+            width: 300px;
+        }
 }
