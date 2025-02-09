@@ -11,7 +11,7 @@ const Hero = () => {
     <section className="hero">
       <div className="hero-content">
         <h1>Wear your beauty with pride</h1>
-        <p>At SalonMyCulture, we believe in embracing your unique style and expressing your individuality through the artistry of your hair and nails.</p>
+        <p>At Salon My-Culture, we believe in embracing your unique style and expressing your individuality through the artistry of your hair and nails.</p>
       </div>
       
       <Swiper
