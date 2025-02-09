@@ -19,6 +19,7 @@ const Header = () => {
     <header className="header">
       <div className="logo">
         <Link to="/"><img src={logo} alt="salon my culture logo"/></Link>
+        <div className="logo-name">Salon My-Culture</div>
       </div>
 
       {!isHome? (

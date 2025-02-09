@@ -14,7 +14,7 @@ const AboutUs = () => {
       <div className="about-us">
         <div className="about-content">
           <div>
-            <h2>Welcome to Salon My Culture</h2>
+            <h2>Welcome to Salon My-Culture</h2>
             <p>
               Welcome to Salon My-Culture Beauty Salon and Spa, the ultimate destination for luxury beauty and grooming in Abuja. Located in <span>Wuse 2, Abuja</span>, we are a top-rated salon offering a full suite of beauty, hair, spa, and grooming services for men and women.
             </p>
